@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Authors and Sellers </title>
+        <style>
+            table, th, tr, td {border: 1px solid black}
+        </style>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h3> Authors and Sellers </h3>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Age</th>
+                <th>Birth Date</th>
+                <th>Public Visibility</th>
+            </tr>
+            {% for Customer in cust %}
+            <tr>
+                <td>{{Customer.id}}</td>
+                <td>{{Customer.email}}</td>
+                <td>{{Customer.address}}</td>
+                <td>{{Customer.age}}</td>
+                <td>{{Customer.birth_date}}</td>
+                <td>{{Customer.public_visibility}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
